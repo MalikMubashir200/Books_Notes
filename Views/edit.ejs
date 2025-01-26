@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Edit Book</title>
+   <!-- Links -->
+   <link href="https://api.fontshare.com/v2/css?f[]=general-sans@700&f[]=bespoke-serif@801&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+   <section class="form-section">
+       <div class="form-container">
+         <h2 class="form-title">Edit Book</h2>
+         <form action="/update/<%= book.id %>" method="POST" class="form">
+
+           <!-- Book Title -->
+           <div class="form-group">
+             <label for="title">Book Title</label>
+             <input type="text" id="title" name="updatedTitle" placeholder="Enter the book title" value="<%= book.title %>">
+           </div>
+     
+           <!-- Notes Content -->
+           <div class="form-group">
+             <label for="desc">Notes</label>
+             <textarea id="desc" name="updatedDesc" placeholder="Write your notes here..." maxlength="500" ><%= book.content %></textarea>
+           </div>
+     
+           <!-- Additional Information Row -->
+           <div class="form-row">
+             <!-- ISBN -->
+             <div class="form-group">
+               <label for="isbn">ISBN</label>
+               <input type="text" id="isbn" name="updatedIsbn" value="<%= book.isbn %>" placeholder="Enter the ISBN" >
+             </div>
+             <!-- Rating -->
+             <div class="form-group">
+               <label for="rate">Rating</label>
+               <input type="number" id="rate" name="updatedRate" value="<%= book.rating %>" placeholder="Rating (1-5)" min="1" max="5">
+             </div>
+           </div>
+     
+           <!-- Submit Button -->
+           <button type="submit" class="primary-button">Update Book</button>
+         </form>
+       </div>
+     </section>
+</body>
+</html>

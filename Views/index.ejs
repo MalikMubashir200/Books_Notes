@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Notes Manager</title>
+  <!-- links -->
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@700&f[]=bespoke-serif@801&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="header">
+    <h1>Book Notes Manager</h1>
+    <h2>Books I’ve read</h2>
+    <p>
+      Tiny summary but detailed notes for each. Use the ISBN number to find it from your local library or anywhere else.
+    </p>
+    <a class="btn" href="/new">Add Book</a>
+  </header>
+
+  <hr>
+
+  
+  <section class="book-list">
+    <h2>Your Book Collection</h2>
+    <div class="card-container">
+      <% books.forEach((book) => { %>
+        <div class="row">
+          <div class="left">
+            <img src="<%= book.cover_url %>" alt="<%= book.title %>">
+          </div>
+          <div class="right">
+            <div class="content">
+              <h3><a href="/view/<%=book.id%>"><%= book.title %></a></h3>
+              <span>ISBN:<%= book.isbn %> RECOMANDED:<%= book.rating %>/5</span>
+              <p><%= book.content.slice(0,200) %>...</p>
+            </div>
+            <div class="actions">
+              <div class="delete">
+                <form action="/delete" method="post">
+                  <input type="hidden" name="id" value="<%= book.id %>">
+                  <button class="btn">Delete</button>
+                </form>
+              </div>
+              <div class="edit">
+                <button class="btn"><a class="btn" href="/edit/<%= book.id %>">Edit</a></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </section>
+
+  
+
+    
+</section>
+
+</body>
+</html>

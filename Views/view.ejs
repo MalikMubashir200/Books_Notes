@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View -Book Notes</title>
+  <!-- links -->
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@700&f[]=bespoke-serif@801&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/main.css">
+<body>
+  <header class="header">
+    <h1>Book Notes Manager</h1>
+    <h2>Books I’ve read</h2>
+    <p>
+      Tiny summary but detailed notes for each. Use the ISBN number to find it from your local library or anywhere else.
+    </p>
+  </header>
+<hr>
+<div class="detail">
+  <h2>Notes:</h2>
+  <span>ISBN:<%= book.isbn %></span>
+  <h2><%= book.title %></h2>
+  <p><%= book.content %></p>
+</div>
+  
+</body>
+</html>

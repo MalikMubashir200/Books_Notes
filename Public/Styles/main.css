@@ -1,0 +1,190 @@
+body{
+    width: 65%;
+    margin: auto;
+    background-color: #000;
+    color: white;
+}
+
+
+h1{
+    font-size: 3rem;
+    color: #080;
+    font-family: 'General Sans', sans-serif;
+    font-family: 'Bespoke Serif', serif
+}
+
+h1:hover{
+  text-decoration: underline;
+}
+
+h2{
+    font-size: 2rem;
+     color: #080;
+     font-family: 'General Sans', sans-serif;
+     font-family: 'Bespoke Serif', serif
+}
+
+h3{
+    font-size: 2rem;
+    color: #88f;
+    text-decoration: underline;
+    
+}
+
+
+hr{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* Form Section Styling */
+.form-section {
+    padding: 30px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 10px; /* Rounded corners for the form */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  /* Form Title */
+  .form-title {
+    font-family: 'General Sans', sans-serif;
+    font-size: 2rem;
+    color: #080;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Layout */
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Spacing between form fields */
+  }
+  
+  /* Form Group */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    font-size: 1rem;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    outline: none;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #155A8A; /* Highlight color for focused fields */
+    box-shadow: 0 0 5px rgba(21, 90, 138, 0.5);
+  }
+  
+  /* Form Row */
+  .form-row {
+    display: flex;
+    gap: 20px; /* Spacing between fields in a row */
+  }
+  
+  .form-row .form-group {
+    flex: 1; /* Make both fields equally wide */
+  }
+  
+  /* Submit Button */
+  .primary-button {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    background-color: #155A8A;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .primary-button:hover {
+    background-color: #0d4566;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .form-row {
+      flex-direction: column;
+      gap: 15px; /* Adjust spacing for smaller screens */
+    }
+  }
+  
+  .book-list {
+    margin-top: 50px;
+    padding: 20px;
+    width: 100%;
+}
+
+.row{
+  display: flex;
+   width: 90%;
+   height: auto;
+   margin-top: 50px;
+}
+
+.left{
+  width: 40%;
+  position: relative;
+  top: 40px;
+}
+
+.left img{
+  height: 400;
+  margin-right: 1rem;
+}
+
+.righ{
+  width: 60%;
+}
+
+h3 a{
+  font-size: 1.8rem;
+  color: #007BFF;
+  font-family: 'Bespoke Serif', serif;
+  letter-spacing: 2px;
+}
+p{
+    font-size: 1.1rem;
+    font-family: 'Bespoke Serif', serif;
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+
+span{
+  font-family: 'Bespoke Serif', serif;
+  letter-spacing: 2px;
+}
+
+.actions{
+  display: flex;
+  gap: 10px;
+}
+
+
+.btn{
+  color: white;
+  background:green;
+  text-decoration: none;
+  color: white;
+  padding: 7px;
+  border: none;
+}
